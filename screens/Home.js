@@ -110,9 +110,9 @@ const Home = ({ navigation }) => {
                 },
                 {
                     menuId: 2,
-                    name: "Crispy Chicken Burger with Honey Mustard",
+                    name: "Burger & Honey Mustard",
                     photo: images.honey_mustard_chicken_burger,
-                    description: "Crispy Chicken Burger with Honey Mustard Coleslaw",
+                    description: "Burger with Honey Mustard Coleslaw",
                     calories: 250,
                     price: 15
                 },
@@ -171,7 +171,7 @@ const Home = ({ navigation }) => {
                     menuId: 7,
                     name: "Mediterranean Chopped Salad ",
                     photo: images.salad,
-                    description: "Finely chopped lettuce, tomatoes, cucumbers",
+                    description: "Chopped lettuce, tomatoes, cucumbers",
                     calories: 100,
                     price: 10
                 }
@@ -358,7 +358,7 @@ const Home = ({ navigation }) => {
 
     function renderHeader() {
         return (
-            <View style={{ flexDirection: 'row', height: 50 }}>
+            <SafeAreaView style={{ marginTop: 38, flexDirection: 'row', height: 50 }}>
                 <TouchableOpacity
                     style={{
                         width: 50,
@@ -367,11 +367,11 @@ const Home = ({ navigation }) => {
                     }}
                 >
                     <Image
-                        source={icons.nearby}
+                        source={icons.nearbyicon}
                         resizeMode="contain"
                         style={{
-                            width: 30,
-                            height: 30
+                            width: 40,
+                            height: 40
                         }}
                     />
                 </TouchableOpacity>
@@ -399,15 +399,17 @@ const Home = ({ navigation }) => {
                     }}
                 >
                     <Image
-                        source={icons.basket}
+                        source={icons.cart}
                         resizeMode="contain"
                         style={{
-                            width: 30,
-                            height: 30
+                            // paddingRight: 20,
+                            width: 40,
+                            height: 40,
+                            shadow: 10
                         }}
                     />
                 </TouchableOpacity>
-            </View>
+            </SafeAreaView>
         )
     }
 
@@ -419,7 +421,7 @@ const Home = ({ navigation }) => {
                         padding: SIZES.padding,
                         paddingBottom: SIZES.padding * 2,
                         backgroundColor: (selectedCategory?.id == item.id) ? COLORS.primary : COLORS.white,
-                        borderRadius: SIZES.radius,
+                        borderRadius: 16,
                         alignItems: "center",
                         justifyContent: "center",
                         marginRight: SIZES.padding,
@@ -515,7 +517,7 @@ const Home = ({ navigation }) => {
                             ...styles.shadow
                         }}
                     >
-                        <Text style={{ ...FONTS.h4 }}>{item.duration}</Text>
+                        <Text style={{ fontWeight: '700', color: '#d46623', fontSize: 16, lineHeight: 22 }}>{item.duration}</Text>
                     </View>
                 </View>
 
@@ -528,17 +530,19 @@ const Home = ({ navigation }) => {
                         flexDirection: 'row'
                     }}
                 >
+                    <Text style={{ ...FONTS.body3 }}>{item.rating}</Text>
                     {/* Rating */}
                     <Image
                         source={icons.star}
                         style={{
+                            marginTop: 4,
                             height: 20,
                             width: 20,
                             tintColor: COLORS.primary,
-                            marginRight: 10
+                            marginLeft: 10
                         }}
                     />
-                    <Text style={{ ...FONTS.body3 }}>{item.rating}</Text>
+                    
 
                     {/* Categories */}
                     <View
@@ -554,7 +558,7 @@ const Home = ({ navigation }) => {
                                         style={{ flexDirection: 'row' }}
                                         key={categoryId}
                                     >
-                                        <Text style={{ ...FONTS.body3 }}>{getCategoryNameById(categoryId)}</Text>
+                                        <Text style={{ ...FONTS.body4 }}>{getCategoryNameById(categoryId)}</Text>
                                         <Text style={{ ...FONTS.h3, color: COLORS.darkgray }}> . </Text>
                                     </View>
                                 )
