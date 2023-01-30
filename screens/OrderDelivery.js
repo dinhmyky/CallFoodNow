@@ -5,7 +5,7 @@ import {
     Image,
     TouchableOpacity
 } from "react-native";
-import MapView, { PROVIDER_GOOGLE, Marker } from 'react-native-maps';
+import MapView, { Polyline, PROVIDER_GOOGLE, Marker } from 'react-native-maps';
 import MapViewDirections from "react-native-maps-directions";
 
 import { COLORS, FONTS, icons, SIZES, GOOGLE_API_KEY } from "../constants"
@@ -119,7 +119,7 @@ const OrderDelivery = ({ route, navigation }) => {
             </Marker>
         )
 
-        const carIcon = () => (
+        const shipperIcon = () => (
             <Marker
                 coordinate={fromLocation}
                 anchor={{ x: 0.5, y: 0.5 }}
@@ -127,10 +127,10 @@ const OrderDelivery = ({ route, navigation }) => {
                 rotation={angle}
             >
                 <Image
-                    source={icons.car}
+                    source={icons.shipper}
                     style={{
-                        width: 40,
-                        height: 40
+                        width: 47.8,
+                        height: 47.8
                     }}
                 />
             </Marker>
@@ -144,7 +144,7 @@ const OrderDelivery = ({ route, navigation }) => {
                     initialRegion={region}
                     style={{ flex: 1 }}
                 >
-                    <MapViewDirections
+                    {/* <MapViewDirections
                         origin={fromLocation}
                         destination={toLocation}
                         apikey={GOOGLE_API_KEY}
@@ -180,9 +180,18 @@ const OrderDelivery = ({ route, navigation }) => {
                                 setIsReady(true)
                             }
                         }}
-                    />
+                    /> */}
                     {destinationMarker()}
-                    {carIcon()}
+                    {shipperIcon()}
+                    <Polyline
+                        coordinates={[
+                            fromLocation, toLocation
+                            //{ latitude: 37.7896386, longitude: -122.421646 },
+                        ]}
+                        strokeColor="#05a2e9" // fallback for when `strokeColors` is not supported by the map-provider
+                        // strokeColors={['#00b0ff']}
+                        strokeWidth={6}
+                    />
                 </MapView>
             </View>
         )
@@ -267,12 +276,13 @@ const OrderDelivery = ({ route, navigation }) => {
                             {/* Name & Rating */}
                             <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
                                 <Text style={{ ...FONTS.h4 }}>{restaurant?.courier.name}</Text>
-                                <View style={{ flexDirection: 'row' }}>
+                                <View style={{ flexDirection: 'row', alignSelf: 'center', justifyContent: 'center'}}>
+                                    
+                                    <Text style={{ marginRight: 9, ...FONTS.body3 }}>{restaurant?.rating}</Text>
                                     <Image
                                         source={icons.star}
-                                        style={{ width: 18, height: 18, tintColor: COLORS.primary, marginRight: SIZES.padding }}
+                                        style={{ marginTop: 4, width: 20, height: 20, tintColor: COLORS.primary, marginRight: SIZES.padding }}
                                     />
-                                    <Text style={{ ...FONTS.body3 }}>{restaurant?.rating}</Text>
                                 </View>
                             </View>
 
