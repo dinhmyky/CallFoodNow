@@ -103,6 +103,7 @@ const Tabs = () => {
         <Tab.Navigator
             tabBarOptions={{
                 showLabel: false,
+                headerShown: false,
                 style: {
                     position: 'absolute',
                     left: 0,
@@ -123,6 +124,7 @@ const Tabs = () => {
                 name="Home"
                 component={Home}
                 options={{
+                    headerShown:false,
                     tabBarIcon: ({ focused }) => (
                         <Image
                             source={icons.cutlery}
@@ -146,6 +148,7 @@ const Tabs = () => {
                 name="Search"
                 component={Home}
                 options={{
+                    headerShown:false,
                     tabBarIcon: ({ focused }) => (
                         <Image
                             source={icons.search}
@@ -169,6 +172,7 @@ const Tabs = () => {
                 name="Like"
                 component={Home}
                 options={{
+                    headerShown:false,
                     tabBarIcon: ({ focused }) => (
                         <Image
                             source={icons.like}
@@ -192,6 +196,7 @@ const Tabs = () => {
                 name="User"
                 component={Home}
                 options={{
+                    headerShown:false,
                     tabBarIcon: ({ focused }) => (
                         <Image
                             source={icons.user}

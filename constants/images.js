@@ -23,11 +23,12 @@ const nasi_lemak = require("../assets/images/nasi-lemak.jpg");
 const noodle_shop = require("../assets/images/noodle-shop.jpg");
 const pizza_restaurant = require("../assets/images/pizza-restaurant.jpg");
 const pizza = require("../assets/images/pizza.jpg");
-const salad = require("../assets/images/salad.jpg");
+
 const sarawak_laksa = require("../assets/images/sarawak-laksa.jpg");
 const sushi = require("../assets/images/sushi.jpg");
 const teh_c_peng = require("../assets/images/teh-c-peng.jpg");
 const tomato_pasta = require("../assets/images/tomato-pasta.jpg");
+const salad_pic=require("../assets/images/saladpic.jpg");
 
 export default {
     avatar_1,

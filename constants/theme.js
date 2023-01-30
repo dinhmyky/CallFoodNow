@@ -60,6 +60,7 @@ export const FONTS = {
     h2: { fontWeight: 'bold', color: 'black', fontSize: SIZES.h2, lineHeight: 30 },
     h3: {fontWeight: 'bold', color: 'black', fontSize: SIZES.h3, lineHeight: 22 },
     h4: { fontWeight: 'bold', color: 'black', fontSize: SIZES.h4, lineHeight: 22 },
+    //h2: { fontWeight: 200, color: 'lightGray2', fontSize: SIZES.h2, lineHeight: 30 },
     body1: { fontWeight: 'normal', color: 'black', fontSize: SIZES.body1, lineHeight: 36 },
     body2: { fontWeight: 'normal', color: 'black', fontSize: SIZES.body2, lineHeight: 30 },
     body3: { fontWeight: 'normal', color: 'black', fontSize: SIZES.body3, lineHeight: 22 },
