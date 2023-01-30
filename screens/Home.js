@@ -9,17 +9,17 @@ import {
     FlatList
 } from "react-native";
 
-import { icons, images, SIZES, COLORS, FONTS } from '../constants'
+import { icons, images, SIZES, COLORS, FONTS} from '../constants'
 
 const Home = ({ navigation }) => {
 
     // Dummy Datas
 
     const initialCurrentLocation = {
-        streetName: "Kuching",
+        streetName: "Saigon",
         gps: {
-            latitude: 1.5496614931250685,
-            longitude: 110.36381866919922
+            latitude: 10.8029813,
+            longitude: 106.6459142
         }
     }
 
@@ -85,15 +85,15 @@ const Home = ({ navigation }) => {
     const restaurantData = [
         {
             id: 1,
-            name: "ByProgrammers Burger",
+            name: "CallFoodNow Burger",
             rating: 4.8,
             categories: [5, 7],
             priceRating: affordable,
             photo: images.burger_restaurant_1,
-            duration: "30 - 45 min",
+            duration: "25 - 30 min",
             location: {
-                latitude: 1.5347282806345879,
-                longitude: 110.35632207358996,
+                latitude: 10.7572485,
+                longitude: 106.6748804,
             },
             courier: {
                 avatar: images.avatar_1,
@@ -128,15 +128,15 @@ const Home = ({ navigation }) => {
         },
         {
             id: 2,
-            name: "ByProgrammers Pizza",
+            name: "CallFoodNow Pizza",
             rating: 4.8,
             categories: [2, 4, 6],
             priceRating: expensive,
             photo: images.pizza_restaurant,
             duration: "15 - 20 min",
             location: {
-                latitude: 1.556306570595712,
-                longitude: 110.35504616746915,
+                latitude: 10.7628137,
+                longitude: 106.6879271,
             },
             courier: {
                 avatar: images.avatar_2,
@@ -179,15 +179,15 @@ const Home = ({ navigation }) => {
         },
         {
             id: 3,
-            name: "ByProgrammers Hotdogs",
+            name: "CallFoodNow Hotdogs",
             rating: 4.8,
             categories: [3],
             priceRating: expensive,
             photo: images.hot_dog_restaurant,
             duration: "20 - 25 min",
             location: {
-                latitude: 1.5238753474714375,
-                longitude: 110.34261833833622,
+                latitude: 10.7692202,
+                longitude: 106.6880059,
             },
             courier: {
                 avatar: images.avatar_3,
@@ -206,19 +206,19 @@ const Home = ({ navigation }) => {
         },
         {
             id: 4,
-            name: "ByProgrammers Sushi",
+            name: "CallFoodNow Sushi",
             rating: 4.8,
             categories: [8],
             priceRating: expensive,
             photo: images.japanese_restaurant,
             duration: "10 - 15 min",
             location: {
-                latitude: 1.5578068150528928,
-                longitude: 110.35482523764315,
+                latitude: 10.8029813,
+                longitude: 106.6459142,
             },
             courier: {
                 avatar: images.avatar_4,
-                name: "Ahmad"
+                name: "John"
             },
             menu: [
                 {
@@ -233,19 +233,19 @@ const Home = ({ navigation }) => {
         },
         {
             id: 5,
-            name: "ByProgrammers Cuisine",
+            name: "CallFoodNow Cuisine",
             rating: 4.8,
             categories: [1, 2],
             priceRating: affordable,
             photo: images.noodle_shop,
             duration: "15 - 20 min",
             location: {
-                latitude: 1.558050496260768,
-                longitude: 110.34743759630511,
+                latitude: 10.8064108,
+                longitude: 106.6459142,
             },
             courier: {
                 avatar: images.avatar_4,
-                name: "Muthu"
+                name: "Emily"
             },
             menu: [
                 {
@@ -286,15 +286,15 @@ const Home = ({ navigation }) => {
         {
 
             id: 6,
-            name: "ByProgrammers Dessets",
+            name: "CallFoodNow Desserts",
             rating: 4.9,
             categories: [9, 10],
             priceRating: affordable,
             photo: images.kek_lapis_shop,
             duration: "35 - 40 min",
             location: {
-                latitude: 1.5573478487252896,
-                longitude: 110.35568783282145,
+                latitude: 10.798296,
+                longitude: 106.6483362,
             },
             courier: {
                 avatar: images.avatar_1,
@@ -462,8 +462,7 @@ const Home = ({ navigation }) => {
 
         return (
             <View style={{ padding: SIZES.padding * 2 }}>
-                <Text style={{ ...FONTS.h1 }}>Main</Text>
-                <Text style={{ ...FONTS.h1 }}>Categories</Text>
+                <Text style={{ ...FONTS.h1 }}>Main Categories</Text>
 
                 <FlatList
                     data={categories}

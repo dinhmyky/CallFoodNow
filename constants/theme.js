@@ -1,3 +1,4 @@
+//import {Roboto_400Regular, Roboto_900Black, Roboto_700Bold} from "@expo-google-fonts/roboto";
 import { Dimensions } from "react-native";
 const { width, height } = Dimensions.get("window");
 
@@ -44,16 +45,26 @@ export const SIZES = {
 };
 
 export const FONTS = {
-    largeTitle: { fontFamily: "Roboto-regular", fontSize: SIZES.largeTitle, lineHeight: 55 },
-    h1: { fontFamily: "Roboto-Black", fontSize: SIZES.h1, lineHeight: 36 },
-    h2: { fontFamily: "Roboto-Bold", fontSize: SIZES.h2, lineHeight: 30 },
-    h3: { fontFamily: "Roboto-Bold", fontSize: SIZES.h3, lineHeight: 22 },
-    h4: { fontFamily: "Roboto-Bold", fontSize: SIZES.h4, lineHeight: 22 },
-    body1: { fontFamily: "Roboto-Regular", fontSize: SIZES.body1, lineHeight: 36 },
-    body2: { fontFamily: "Roboto-Regular", fontSize: SIZES.body2, lineHeight: 30 },
-    body3: { fontFamily: "Roboto-Regular", fontSize: SIZES.body3, lineHeight: 22 },
-    body4: { fontFamily: "Roboto-Regular", fontSize: SIZES.body4, lineHeight: 22 },
-    body5: { fontFamily: "Roboto-Regular", fontSize: SIZES.body5, lineHeight: 22 },
+    // largeTitle: {fontFamily: Roboto_400Regular, fontSize: SIZES.largeTitle, lineHeight: 55 },
+    // h1: { fontFamily: Roboto_900Black, fontSize: SIZES.h1, lineHeight: 36 },
+    // h2: { fontFamily: Roboto_700Bold, fontSize: SIZES.h2, lineHeight: 30 },
+    // h3: { fontFamily: Roboto_700Bold, fontSize: SIZES.h3, lineHeight: 22 },
+    // h4: { fontFamily: Roboto_700Bold, fontSize: SIZES.h4, lineHeight: 22 },
+    // body1: { fontFamily: Roboto_400Regular, fontSize: SIZES.body1, lineHeight: 36 },
+    // body2: { fontFamily: Roboto_400Regular, fontSize: SIZES.body2, lineHeight: 30 },
+    // body3: { fontFamily: Roboto_400Regular, fontSize: SIZES.body3, lineHeight: 22 },
+    // body4: { fontFamily: Roboto_400Regular, fontSize: SIZES.body4, lineHeight: 22 },
+    // body5: { fontFamily: Roboto_400Regular, fontSize: SIZES.body5, lineHeight: 22 },
+    largeTitle: {fontWeight: 'normal', color: 'black', fontSize: SIZES.largeTitle, lineHeight: 55 },
+    h1: { fontWeight: 'normal', color:'black', fontSize: SIZES.h1, lineHeight: 36 },
+    h2: { fontWeight: 'bold', color: 'black', fontSize: SIZES.h2, lineHeight: 30 },
+    h3: {fontWeight: 'bold', color: 'black', fontSize: SIZES.h3, lineHeight: 22 },
+    h4: { fontWeight: 'bold', color: 'black', fontSize: SIZES.h4, lineHeight: 22 },
+    body1: { fontWeight: 'normal', color: 'black', fontSize: SIZES.body1, lineHeight: 36 },
+    body2: { fontWeight: 'normal', color: 'black', fontSize: SIZES.body2, lineHeight: 30 },
+    body3: { fontWeight: 'normal', color: 'black', fontSize: SIZES.body3, lineHeight: 22 },
+    body4: { fontWeight: 'normal', color: 'black', fontSize: SIZES.body4, lineHeight: 22 },
+    body5: { fontWeight: 'normal', color: 'black', fontSize: SIZES.body5, lineHeight: 22 },
 };
 
 const appTheme = { COLORS, SIZES, FONTS };
